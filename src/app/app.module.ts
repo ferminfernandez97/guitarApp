@@ -15,6 +15,8 @@ import { APP_ROUTING } from './app.routes';
 
 //Servicios
 
+import {guitarsService} from './services/guitars.service';
+
 //Componentes
 
 
@@ -31,7 +33,9 @@ import { APP_ROUTING } from './app.routes';
     BrowserModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+  guitarsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

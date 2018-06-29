@@ -1,12 +1,12 @@
-<h1> Fender <small> Guitars </small></h1>
+<h1> Nandez <small> Guitars </small></h1>
 <hr>
 
 <div class="card-columns">
 
   <div class="card animated fadeIn fast" *ngFor="let guitar of guitars; let i=index">
-    <img class="card-img-top" [src]="guitar.img" [alt]="guitar.nombre">
+    <img class="card-img-top" [src]="guitar.img" [alt]="guitar.name">
     <div class="card-body">
-      <h5 class="card-title">{{ guitar.nombre }}</h5>
+      <h5 class="card-title">{{ guitar.name }}</h5>
       <p class="card-text">{{ guitar.description }}</p>
       <p class="card-text"><small class="text-muted">{{guitar.strings}}</small></p>
 

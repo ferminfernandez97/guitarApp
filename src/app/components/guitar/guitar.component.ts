@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { guitarsService } from '../../services/guitars.service';
+import { guitarsService, Guitar } from '../../services/guitars.service';
 
 @Component({
   selector: 'app-guitar',
@@ -17,9 +17,10 @@ export class GuitarComponent  {
 
     this.activatedRoute.params.subscribe( params =>{
       this.guitar = this._guitarsService.getGuitar( params['id']);
+      console.log(this.guitar);
     })
 
-  }
 
+  }
 
 }

@@ -1,4 +1,4 @@
-<h1> {{ guitar.name }} <small> {{guitar.strings}} </small></h1>
+<h1 class="animated fadeIn"> {{ guitar.name }} <small> {{guitar.strings | uppercase }} </small></h1>
 
 <hr>
 
@@ -19,7 +19,7 @@
     </p>
     <div>
 
-      <img src="{{guitar.brand}}" class="img-fluid" alt="">
+      <img [src]="guitar.brand" class="img-fluid" alt="">
     </div>
   </div>
 

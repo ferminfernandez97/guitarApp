@@ -3,16 +3,18 @@
 
 <div class="card-columns">
 
-  <div class="card" *ngFor="let guitar of guitars">
+  <div class="card animated fadeIn fast" *ngFor="let guitar of guitars; let i=index">
     <img class="card-img-top" [src]="guitar.img" [alt]="guitar.nombre">
     <div class="card-body">
       <h5 class="card-title">{{ guitar.nombre }}</h5>
       <p class="card-text">{{ guitar.description }}</p>
       <p class="card-text"><small class="text-muted">{{guitar.strings}}</small></p>
 
-      <button type="button" class="btn btn-outline-primary btn-block">
+      <button (click)="showGuitar(i)"
+        type="button" class="btn btn-outline-primary btn-block">
         Ver mas...
       </button>
+    <!--  <a [routerLink]="['/guitar',i]" class="btn btn-outline-primary">Ver mas enlace..</a> -->
     </div>
   </div>
 

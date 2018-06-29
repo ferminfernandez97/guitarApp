@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+//Componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { GuitarsComponent } from './components/guitars/guitars.component';
-
-
+import { GuitarComponent } from './components/guitar/guitar.component';
 
 
 //Rutas
@@ -17,7 +17,7 @@ import { APP_ROUTING } from './app.routes';
 
 import {guitarsService} from './services/guitars.service';
 
-//Componentes
+
 
 
 
@@ -27,7 +27,8 @@ import {guitarsService} from './services/guitars.service';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    GuitarsComponent
+    GuitarsComponent,
+    GuitarComponent
   ],
   imports: [
     BrowserModule,

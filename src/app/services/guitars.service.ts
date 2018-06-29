@@ -63,6 +63,9 @@ export class guitarsService {
     return this.guitars;
   }
 
+  getGuitar(i:number){
+    return this.guitars[i];
+  }
 
 }
 

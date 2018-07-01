@@ -14,7 +14,6 @@ export class NavbarComponent implements OnInit {
   }
 
   searchGuitar(term:string){
-    console.log(term);
     this.router.navigate(['/search',term]);
   }
 }

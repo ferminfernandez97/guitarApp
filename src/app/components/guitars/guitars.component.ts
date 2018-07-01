@@ -14,12 +14,12 @@ export class GuitarsComponent implements OnInit {
   constructor(private _guitarsService:guitarsService,
               private router:Router
   ) {
-//    console.log("constructor");
-   }
+    console.log("Guitars Showed")
+
+    }
 
   ngOnInit() {
     this.guitars = this._guitarsService.getGuitars();
-//    console.log(this.guitars);
   }
   showGuitar( idx:number ){
     this.router.navigate( ['/guitar',idx] );

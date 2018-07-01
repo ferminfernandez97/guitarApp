@@ -15,9 +15,9 @@ export class GuitarComponent  {
   ) {
 
 
-    this.activatedRoute.params.subscribe( params =>{
+      this.activatedRoute.params.subscribe( params =>{
       this.guitar = this._guitarsService.getGuitar( params['id']);
-      console.log(this.guitar);
+      console.log("Individual guitar viewed")
     })
 
 

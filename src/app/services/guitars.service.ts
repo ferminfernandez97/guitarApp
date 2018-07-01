@@ -56,7 +56,6 @@ export class guitarsService {
  ];
 
   constructor() {
-  console.log("Servicio listo para usar");
   }
 
   getGuitars():Guitar[] {

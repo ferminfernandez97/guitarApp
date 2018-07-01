@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { guitarsService } from '../../services/guitars.service';
+import { guitarsService , Guitar } from '../../services/guitars.service';
+import {Router} from '@angular/router';
+
 
 
 @Component({
@@ -14,7 +16,8 @@ export class SearchComponent implements OnInit {
   term: string;
 
   constructor( private activatedRoute: ActivatedRoute,
-               private _guitarsService: guitarsService      ) {
+               private _guitarsService: guitarsService,
+               private router:Router                      ) {
 
 
                }
@@ -25,11 +28,16 @@ export class SearchComponent implements OnInit {
     this.activatedRoute.params.subscribe( params =>{
     this.term = params['term'];
     this.guitars = this._guitarsService.searchGuitars(params['term']);
-    console.log(this.guitars);
+    console.log("The search was used");
     })
 
 
   }
+
+  showGuitar( idx:number ){
+    this.router.navigate( ['/guitar',idx] );
+  }
+
 
 
 

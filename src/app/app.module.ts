@@ -8,6 +8,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { GuitarsComponent } from './components/guitars/guitars.component';
 import { GuitarComponent } from './components/guitar/guitar.component';
+import { SearchComponent } from './components/search/search.component';
+
 
 
 //Rutas
@@ -28,7 +30,8 @@ import {guitarsService} from './services/guitars.service';
     HomeComponent,
     AboutComponent,
     GuitarsComponent,
-    GuitarComponent
+    GuitarComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

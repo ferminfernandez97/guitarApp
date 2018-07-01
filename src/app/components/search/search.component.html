@@ -1,0 +1,21 @@
+<h1> Buscando: <small>  {{ term }} </small></h1>
+<hr>
+
+<div class="card-columns">
+
+  <div class="card animated fadeIn fast" *ngFor="let guitar of guitars; let i=index">
+    <img class="card-img-top" [src]="guitar.img" [alt]="guitar.name">
+    <div class="card-body">
+      <h5 class="card-title">{{ guitar.name }}</h5>
+      <p class="card-text">{{ guitar.description }}</p>
+      <p class="card-text"><small class="text-muted">{{guitar.strings}}</small></p>
+
+      <button (click)="showGuitar(i)"
+        type="button" class="btn btn-outline-primary btn-block">
+        Ver mas...
+      </button>
+    <!--  <a [routerLink]="['/guitar',i]" class="btn btn-outline-primary">Ver mas enlace..</a> -->
+    </div>
+  </div>
+
+</div>

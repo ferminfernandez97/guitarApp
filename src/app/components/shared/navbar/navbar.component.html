@@ -22,13 +22,16 @@
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['about']">About</a>
       </li>
+</ul>
 
 
 
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Busqueda" aria-label="Search">
-      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
-    </form>
+
+    <div class="form-inline">
+      <input type="text" class="form-control"  placeholder="Buscar guitarra " (keyup.enter)="searchGuitar(searchText.value)" #searchText >
+      <button (click)="searchGuitar(searchText.value)" class="btn btn-outline-primary" type = "button" >Buscar</button>
+    </div>
+
+
   </div>
 </nav>
